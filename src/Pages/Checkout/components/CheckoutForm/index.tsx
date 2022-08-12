@@ -2,6 +2,7 @@ import { CurrencyDollar, MapPinLine } from "phosphor-react";
 import { useTheme } from "styled-components";
 import { SectionTitle } from "../SectionTitle";
 import { AddressForm } from "./AddressForm";
+import { Payment } from "./Payment";
 //import { Payment } from "./Payment";
 import { Container, SectionFormContainer } from "./styles";
 
@@ -25,10 +26,8 @@ export function CheckoutForm() {
           icon={<CurrencyDollar color={colors.product.purple} size={22} />}
           title="Forma de pagamento"
           subtitle="Selecione a forma de pagamento"
-        />
-          {/*
-          <Payment />
-          */}          
+        />          
+          <Payment />                    
         </SectionFormContainer>
       </Container>
     </>

@@ -8,9 +8,27 @@ import {
   Strong,
 } from "./styles";
 import IllustrationImg from "../../assets/Illustration.png";
+import { useLocation, useNavigate } from "react-router-dom";
+import { CheckoutData } from "../Checkout";
+import { useEffect } from "react";
+import { paymentMethods } from "../Checkout/components/CheckoutForm/Payment";
+
+interface ParamsType {
+  state: CheckoutData;
+}
 
 export function SuccessCheckout() {
   const { colors } = useTheme();
+  const { state } = useLocation() as unknown as ParamsType;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!state) {
+      navigate("/");
+    }
+  }, []);
+
+  if (!state) return <></>;
 
   return (
     <SuccessCheckoutContainer className="container">
@@ -26,8 +44,9 @@ export function SuccessCheckout() {
             text={
               <RegularText>
                 Entrega em <br />
-                <Strong>Boa Vista - Curitiba/PR</Strong>
+                <Strong>{state.street}, {state.number}</Strong>
                 <br />
+                {state.neighborhood} - {state.city}, {state.uf}
               </RegularText>
             }
           />
@@ -47,7 +66,7 @@ export function SuccessCheckout() {
             text={
               <RegularText>
                 Pagamento na entrega <br />
-                <Strong>R$ 0,00</Strong>
+                <Strong>{paymentMethods[state.paymentMethod].label}</Strong>
               </RegularText>
             }
           />

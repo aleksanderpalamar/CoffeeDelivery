@@ -48,6 +48,7 @@ export function CoffeeCartCard({coffee}: CoffeeCartCardProps) {
           </ActionContainer>
         </div>
       </div>
+      <span>{formattedPrice}</span>
     </CoffeeCartCardContainer>
   )
 }

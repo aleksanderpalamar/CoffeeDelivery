@@ -36,6 +36,7 @@ export function Payment() {
           label={label}
           key={label}
           value={key}
+          {...register("paymentMethod")}
         />
       ))}
       {paymentMethodError && <strong>{paymentMethodError}</strong>}

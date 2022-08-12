@@ -12,6 +12,7 @@ export const ButtonContainer = styled.button`
   transition: 0.4s;
   line-height: 1.3rem;
   margin-top: 0.7rem;
+  cursor: pointer;
 
   &:disabled {
     opacity: 0.7;
