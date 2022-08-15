@@ -7,4 +7,5 @@ export const DefaultLayoutContainer = styled.div`
     margin-right: auto;
     margin-left: auto;
   }  
+  
 `;

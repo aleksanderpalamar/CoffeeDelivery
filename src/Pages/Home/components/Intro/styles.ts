@@ -9,6 +9,12 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    height: auto;
+    background: ${() => `url(${bannerBackground}) no-repeat center center`};
+    background-size: cover;
+  }
 `;
 
 export const IntroContainer = styled.div`
@@ -31,6 +37,27 @@ export const IntroContainer = styled.div`
     margin-top: 1rem;
     font-weight: 400;
   }
+  
+  @media (max-width: ${props => props.theme.breakpoints.smartphone}) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    section h1 {
+      font-size: 2rem;
+    }
+    section h3 {
+      font-size: 1rem;
+    }
+
+    img {
+      width: 18rem;
+      height: 15rem;
+    }
+  }
 `;
 
 export const BenefitsContainer = styled.div`
@@ -39,4 +66,15 @@ export const BenefitsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   row-gap: 1.25rem;
   margin-top: 4.125rem;
+
+  @media (max-width: ${props => props.theme.breakpoints.smartphone}) {
+    width: 100%;
+    display: grid;    
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 0.5rem;
+  }
 `;

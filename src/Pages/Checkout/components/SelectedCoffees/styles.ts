@@ -13,6 +13,11 @@ export const SelectedCoffeesContainer = styled.div`
     color: ${(props) => props.theme.colors.base["base-subtitle"]};
     font-weight: 700;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    width: 100%;
+    padding: 0.5rem;
+  }
 `;
 
 export const DetailsContainer = styled(SectionBase)`
@@ -51,5 +56,9 @@ export const ConfirmationSectionContainer = styled.div`
       font-family: ${(props) => props.theme.fonts.text};
       color: ${(props) => props.theme.colors.base["base-text"]};
     }
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    flex-direction: column;
   }
 `;

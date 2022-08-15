@@ -8,6 +8,10 @@ export const CoffeeListContainer = styled.div`
     font-size: 2rem;
     font-family: ${(props) => props.theme.fonts.header};
   }
+  
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    padding: 0.5rem;
+  }
 `;
 
 export const CoffeesList = styled.div`
@@ -17,4 +21,14 @@ export const CoffeesList = styled.div`
   column-gap: 2rem;
   row-gap: 2.5rem;
   margin-top: 3.5rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    width: 100%;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+    margin-top: 3.5rem;
+  }
 `;

@@ -14,12 +14,23 @@ export const Container = styled.div`
     color: ${(props) => props.theme.colors.base["base-subtitle"]};
     font-weight: 700;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    width: 100%;
+    padding: 0.5rem;
+  }
 `;
 
 export const SectionFormContainer = styled(SectionBase)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const AddressFormContainer = styled.div`
@@ -42,6 +53,21 @@ export const AddressFormContainer = styled.div`
   .complement {
     grid-column: span 2;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+
+    .cep {
+      grid-column: span 1;      
+    }
+    .street {
+      grid-column: span 1;
+    }
+    .complement {
+      grid-column: span 1;
+    }
+  }
 `;
 
 export const PaymentContainer = styled.div`
@@ -56,5 +82,11 @@ export const PaymentContainer = styled.div`
     font-family: ${(props) => props.theme.fonts.text};
     font-weight: 400;
     margin-top: 0.875rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.smartphone}) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0.25rem;
   }
 `;

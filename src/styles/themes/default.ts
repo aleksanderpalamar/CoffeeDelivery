@@ -1,6 +1,6 @@
 export const defaultTheme = {
   breakpoints: {
-    smartphone: '320px',
+    smartphone: '480px',
     tablet: '768px',
     laptop: '1024px',
     desktop: '1280px',
