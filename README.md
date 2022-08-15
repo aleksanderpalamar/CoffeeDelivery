@@ -1,5 +1,9 @@
 ## Capa
-<img src=".github/CoffeeDelivery.png" /> <br/> <br/>
+<img src=".github/CoffeeDelivery.png" /> <br/>
+<img src=".github/mobile-home.png" width="120px" /> 
+<img src=".github/mobile-home-coffeelist.png" width="120px"/>
+<img src=".github/mobile-checkout.png" width="120px"/>
+<img src=".github/mobile-selectcoffee.png" width="120px"/> 
 
 ## Funcionalidades da aplicação
 - Adicionar cafés ao carrinho
